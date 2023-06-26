@@ -4,6 +4,7 @@ import { FileText , CheckCircle } from "react-feather";
 import Grid from "@mui/material/Unstable_Grid2";
 import { Button } from "@mui/material";
 
+
 const ResizableIcon = styled(FileText)`
   width: 1.2rem;
   height: 1.5rem;
@@ -25,10 +26,9 @@ const ButtonComponent = ({isActive , handleClose, name }) => {
       <Button
         fullWidth
         variant="contained"
-        // variant="contained"
         startIcon={<ResizableIcon />}
         size="small"
-        className={isActive ? "active" : null}
+        //className={isActive ? "active" : null}
         onClick={handleClose}
         sx={{
           backgroundColor: "#D3D3D3",
@@ -40,10 +40,10 @@ const ButtonComponent = ({isActive , handleClose, name }) => {
           padding: "4px 30px",
           justifyContent: "start",
           ml: 1,
-          ":hover": {
-            bgcolor: "#9F77EB",
-            color: "white", 
-          },
+            ":hover": {
+              bgcolor: "#D3D3D3",
+              color: "black", 
+            },
           
         }}
       >

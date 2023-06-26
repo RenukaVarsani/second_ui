@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Unstable_Grid2";
-import { FileText } from "react-feather";
+import { CheckCircle, FileText } from "react-feather";
 import ButtonComponent from "./ButtonComponent";
 import { Button } from "@mui/material";
 
@@ -16,6 +16,7 @@ const ResizableIcon = styled(FileText)`
 `;
 
 export default function ResponsiveGrid({ isActive, handleClose }) {
+  const [selectedButtons, setSelectedButtons] = React.useState([]);
   return (
     <Box
       sx={{
@@ -39,37 +40,10 @@ export default function ResponsiveGrid({ isActive, handleClose }) {
       <Grid
         container
         spacing={{ xs: 2, md: 2 }}
-        columns={{ xs: 4, sm: 8, md: 12 }}
+        columns={{ xs: 4, sm: 8, md:12 }}
         mb={3}
       >
         <Grid xs={2} sm={4} md={3}>
-          {/* <Button
-            fullWidth
-            variant="contained"
-            // variant="contained"
-            startIcon={<ResizableIcon />}
-            size="small"
-            className={isActive ? 'active' : null}
-            onClick={handleClose}
-            sx={{
-              backgroundColor: "#D3D3D3",
-              fontSize: "1.5",
-              fontWeight: "bolder",
-              color:"black",
-              height: "8vh",
-              textTransform: "none",
-              padding: "4px 30px",
-              justifyContent: "start",
-              ml: 1,
-              ":hover": {
-                bgcolor: "#9F77EB",
-                color: "white",
-              },
-            }}
-          >
-            Invoices
-            <Grid> </Grid>
-          </Button> */}
           <ButtonComponent
             isActive={isActive}
             handleClose={handleClose}
@@ -77,79 +51,26 @@ export default function ResponsiveGrid({ isActive, handleClose }) {
           />
         </Grid>
         <Grid xs={2} sm={4} md={3}>
-          <Button
-            fullWidth
-            variant="contained"
-            startIcon={<ResizableIcon />}
-            size="small"
-            sx={{
-              backgroundColor: "#D3D3D3",
-              fontSize: "1.5",
-              fontWeight: "bolder",
-              color: "black",
-              height: "8vh",
-              textTransform: "none",
-              padding: "4px 30px",
-              justifyContent: "start",
-              ml: 1,
-              ":hover": {
-                bgcolor: "#9F77EB",
-                color: "white",
-              },
-            }}
-          >
-            Receipts
-          </Button>
+          <ButtonComponent
+          
+            isActive={isActive}
+            handleClose={handleClose}
+            name={"Receipts"}
+          />
         </Grid>
         <Grid xs={2} sm={4} md={3}>
-          <Button
-            fullWidth
-            variant="contained"
-            startIcon={<ResizableIcon />}
-            size="small"
-            sx={{
-              backgroundColor: "#D3D3D3",
-              fontSize: "1.5",
-              fontWeight: "bolder",
-              color: "black",
-              height: "8vh",
-              textTransform: "none",
-              padding: "4px 30px",
-              justifyContent: "start",
-              ml: 1,
-              ":hover": {
-                bgcolor: "#9F77EB",
-                color: "white",
-              },
-            }}
-          >
-            Transaction Bill
-          </Button>
+          <ButtonComponent
+            isActive={isActive}
+            handleClose={handleClose}
+            name={" Transaction Bill"}
+          />
         </Grid>
         <Grid xs={2} sm={4} md={3}>
-          <Button
-            fullWidth
-            variant="contained"
-            startIcon={<ResizableIcon />}
-            size="small"
-            sx={{
-              backgroundColor: "#D3D3D3",
-              fontSize: "1.5",
-              fontWeight: "bolder",
-              color: "black",
-              height: "8vh",
-              textTransform: "none",
-              padding: "4px 30px",
-              justifyContent: "start",
-              ml: 1,
-              ":hover": {
-                bgcolor: "#9F77EB",
-                color: "white",
-              },
-            }}
-          >
-            Transaction Invoices
-          </Button>
+          <ButtonComponent
+            isActive={isActive}
+            handleClose={handleClose}
+            name={"Transaction Invoices"}
+          />
         </Grid>
       </Grid>
       <Typography
@@ -167,104 +88,32 @@ export default function ResponsiveGrid({ isActive, handleClose }) {
         mb={3}
       >
         <Grid xs={2} sm={4} md={3}>
-          <Button
-            fullWidth
-            variant="contained"
-            startIcon={<ResizableIcon />}
-            size="small"
-            sx={{
-              backgroundColor: "#D3D3D3",
-              fontSize: "1.5",
-              fontWeight: "bolder",
-              color: "black",
-              height: "8vh",
-              textTransform: "none",
-              padding: "4px 30px",
-              justifyContent: "start",
-              ml: 1,
-              ":hover": {
-                bgcolor: "#9F77EB",
-                color: "white",
-              },
-            }}
-          >
-            Resume
-          </Button>
+          <ButtonComponent
+            isActive={isActive}
+            handleClose={handleClose}
+            name={"   Resume"}
+          />
         </Grid>
         <Grid xs={2} sm={4} md={3}>
-          <Button
-            fullWidth
-            variant="contained"
-            startIcon={<ResizableIcon />}
-            size="small"
-            sx={{
-              backgroundColor: "#D3D3D3",
-              fontSize: "1.5",
-              fontWeight: "bolder",
-              color: "black",
-              height: "8vh",
-              textTransform: "none",
-              padding: "4px 30px",
-              justifyContent: "start",
-              ml: 1,
-              ":hover": {
-                bgcolor: "#9F77EB",
-                color: "white",
-              },
-            }}
-          >
-            Resume List
-          </Button>
+          <ButtonComponent
+            isActive={isActive}
+            handleClose={handleClose}
+            name={"Resume List"}
+          />
         </Grid>
         <Grid xs={2} sm={4} md={3}>
-          <Button
-            fullWidth
-            variant="contained"
-            startIcon={<ResizableIcon />}
-            size="small"
-            sx={{
-              backgroundColor: "#D3D3D3",
-              fontSize: "1.5",
-              fontWeight: "bolder",
-              color: "black",
-              height: "8vh",
-              textTransform: "none",
-              padding: "4px 30px",
-              justifyContent: "start",
-              ml: 1,
-              ":hover": {
-                bgcolor: "#9F77EB",
-                color: "white",
-              },
-            }}
-          >
-            Technical Resume
-          </Button>
+          <ButtonComponent
+            isActive={isActive}
+            handleClose={handleClose}
+            name={" Technical Resume"}
+          />
         </Grid>
         <Grid xs={2} sm={4} md={3}>
-          <Button
-            fullWidth
-            variant="contained"
-            startIcon={<ResizableIcon />}
-            size="small"
-            sx={{
-              backgroundColor: "#D3D3D3",
-              fontSize: "1.5",
-              fontWeight: "bolder",
-              color: "black",
-              height: "8vh",
-              textTransform: "none",
-              padding: "4px 30px",
-              justifyContent: "start",
-              ml: 1,
-              ":hover": {
-                bgcolor: "#9F77EB",
-                color: "white",
-              },
-            }}
-          >
-            Practical Resume
-          </Button>
+          <ButtonComponent
+            isActive={isActive}
+            handleClose={handleClose}
+            name={"Practical Resume"}
+          />
         </Grid>
       </Grid>
       <Typography
@@ -281,105 +130,32 @@ export default function ResponsiveGrid({ isActive, handleClose }) {
         columns={{ xs: 4, sm: 8, md: 12 }}
       >
         <Grid xs={2} sm={4} md={3}>
-          <Button
-            fullWidth
-            variant="contained"
-            startIcon={<ResizableIcon />}
-            size="small"
-            sx={{
-              backgroundColor: "#D3D3D3",
-              fontSize: "1.5",
-              fontWeight: "bolder",
-              color: "black",
-              height: "8vh",
-              textTransform: "none",
-              padding: "4px 30px",
-              justifyContent: "start",
-              ml: 1,
-              ":hover": {
-                bgcolor: "#9F77EB",
-                color: "white",
-              },
-            }}
-          >
-            Aadharcard
-          </Button>
+          <ButtonComponent
+            isActive={isActive}
+            handleClose={handleClose}
+            name={"Aadharcard"}
+          />
         </Grid>
         <Grid xs={2} sm={4} md={3}>
-          <Button
-            fullWidth
-            variant="contained"
-            startIcon={<ResizableIcon />}
-            size="small"
-            sx={{
-              backgroundColor: "#D3D3D3",
-              fontSize: "1.5",
-              fontWeight: "bold",
-              color: "black",
-              height: "8vh",
-              textTransform: "none",
-              padding: "4px 30px",
-              justifyContent: "start",
-              ml: 1,
-              ":hover": {
-                bgcolor: "#9F77EB",
-                color: "white",
-              },
-            }}
-            D3D3D3
-          >
-            Pancard
-          </Button>
+          <ButtonComponent
+            isActive={isActive}
+            handleClose={handleClose}
+            name={"Pancard"}
+          />
         </Grid>
         <Grid xs={2} sm={4} md={3}>
-          <Button
-            fullWidth
-            variant="contained"
-            startIcon={<ResizableIcon />}
-            size="small"
-            sx={{
-              backgroundColor: "#D3D3D3",
-              fontSize: "1.5",
-              fontWeight: "bold",
-              color: "black",
-              height: "8vh",
-              textTransform: "none",
-              padding: "4px 30px",
-              justifyContent: "start",
-              ml: 1,
-              ":hover": {
-                bgcolor: "#9F77EB",
-                color: "white",
-              },
-            }}
-          >
-            Marksheet
-          </Button>
+          <ButtonComponent
+            isActive={isActive}
+            handleClose={handleClose}
+            name={"Marksheet"}
+          />
         </Grid>
         <Grid xs={2} sm={4} md={3}>
-          <Button
-            fullWidth
-            variant="contained"
-            startIcon={<ResizableIcon />}
-            size="small"
-            sx={{
-              backgroundColor: "#D3D3D3",
-              fontSize: "1.5",
-              fontWeight: "bold",
-              color: "black",
-              height: "8vh",
-              textTransform: "none",
-              padding: "4px 30px",
-              justifyContent: "start",
-              ml: 1,
-              ":hover": {
-                bgcolor: "#9F77EB",
-                color: "white",
-              },
-            }}
-          >
-            Certificate
-          </Button>
+          <ButtonComponent
+            isActive={isActive}
+            handleClose={handleClose}
+            name={"Certificate"}
+          />
         </Grid>
       </Grid>
     </Box>

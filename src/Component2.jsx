@@ -88,7 +88,7 @@ function Component2({ handleClose , isActive}) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        {/* <div onClick={handleClose}> */}
+      
         <Button
           variant="contained"
           size="large"
