@@ -25,7 +25,7 @@ function Component2({ handleClose , isActive}) {
   //   setOpen(true);
   // };
   return (
-    <Card sx={{ width: "65vw", height: "95vh" }}>
+    <Card sx={{ width: "65vw", height: "95vh" ,  overflowY:"auto",   overflowY:"auto"}}>
       <CardActionArea>
         <CardHeader
           sx={{
@@ -49,7 +49,7 @@ function Component2({ handleClose , isActive}) {
                 width: "3vh",
                 display: "flex",
                 marginTop : '0.5rem',
-                alignItems: 'center',
+                alignItems: '',
                 mr: 2,
               }}
             />

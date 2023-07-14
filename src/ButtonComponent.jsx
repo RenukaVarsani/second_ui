@@ -15,8 +15,8 @@ const ResizableIcon = styled(FileText)`
 const CheckCircleIcon = styled(CheckCircle)`
   width: 1.2rem;
   height: 1.5rem;
-  padding: 0.3rem;
-  display: grid;
+  padding: 0.3rem;  
+  display: flex ;
 `;
 
 
@@ -27,12 +27,14 @@ const ButtonComponent = ({isActive , handleClose, name }) => {
         fullWidth
         variant="contained"
         startIcon={<ResizableIcon />}
-        size="small"
-        //className={isActive ? "active" : null}
+        endIcon={<CheckCircleIcon /> }
+        size="medium"
+        className={isActive ? "active" : null}
         onClick={handleClose}
         sx={{
           backgroundColor: "#D3D3D3",
           fontSize: "1.5",
+          marginLeft:"30px",
           fontWeight: "bolder",
           color: "black",
           height: "8vh",

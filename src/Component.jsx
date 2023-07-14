@@ -4,6 +4,7 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Avatar from "@mui/material/Avatar";
 import Img from "../src/images/x-circle.svg";
+import { createTheme, ThemeProvider , makeStyles } from "@mui/material";
 // import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
 import {
   Button,
@@ -13,6 +14,18 @@ import {
   TextField,
 } from "@mui/material";
 
+
+const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 960,
+      lg: 1280,
+      xl: 1920,
+    },
+  },
+});
 
 export default function MultiActionAreaCard() {
   return (

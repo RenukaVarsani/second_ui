@@ -43,14 +43,14 @@ export default function ResponsiveGrid({ isActive, handleClose }) {
         columns={{ xs: 4, sm: 8, md:12 }}
         mb={3}
       >
-        <Grid xs={2} sm={4} md={3}>
+        <Grid xs={12} sm={4} md={3}>
           <ButtonComponent
             isActive={isActive}
             handleClose={handleClose}
             name={"Invoices"}
           />
         </Grid>
-        <Grid xs={2} sm={4} md={3}>
+        <Grid xs={12} sm={4} md={3}>
           <ButtonComponent
           
             isActive={isActive}
@@ -58,14 +58,14 @@ export default function ResponsiveGrid({ isActive, handleClose }) {
             name={"Receipts"}
           />
         </Grid>
-        <Grid xs={2} sm={4} md={3}>
+        <Grid xs={12} sm={4} md={3}>
           <ButtonComponent
             isActive={isActive}
             handleClose={handleClose}
             name={" Transaction Bill"}
           />
         </Grid>
-        <Grid xs={2} sm={4} md={3}>
+        <Grid xs={12} sm={4} md={3}>
           <ButtonComponent
             isActive={isActive}
             handleClose={handleClose}
@@ -87,28 +87,28 @@ export default function ResponsiveGrid({ isActive, handleClose }) {
         columns={{ xs: 4, sm: 8, md: 12 }}
         mb={3}
       >
-        <Grid xs={2} sm={4} md={3}>
+        <Grid xs={12} sm={4} md={3}>
           <ButtonComponent
             isActive={isActive}
             handleClose={handleClose}
             name={"   Resume"}
           />
         </Grid>
-        <Grid xs={2} sm={4} md={3}>
+        <Grid xs={12} sm={4} md={3}>
           <ButtonComponent
             isActive={isActive}
             handleClose={handleClose}
             name={"Resume List"}
           />
         </Grid>
-        <Grid xs={2} sm={4} md={3}>
+        <Grid xs={12} sm={4} md={3}>
           <ButtonComponent
             isActive={isActive}
             handleClose={handleClose}
             name={" Technical Resume"}
           />
         </Grid>
-        <Grid xs={2} sm={4} md={3}>
+        <Grid xs={12} sm={4} md={3}>
           <ButtonComponent
             isActive={isActive}
             handleClose={handleClose}
@@ -129,28 +129,28 @@ export default function ResponsiveGrid({ isActive, handleClose }) {
         spacing={{ xs: 2, md: 2 }}
         columns={{ xs: 4, sm: 8, md: 12 }}
       >
-        <Grid xs={2} sm={4} md={3}>
+        <Grid xs={12} sm={4} md={3}>
           <ButtonComponent
             isActive={isActive}
             handleClose={handleClose}
             name={"Aadharcard"}
           />
         </Grid>
-        <Grid xs={2} sm={4} md={3}>
+        <Grid xs={12} sm={4} md={3}>
           <ButtonComponent
             isActive={isActive}
             handleClose={handleClose}
             name={"Pancard"}
           />
         </Grid>
-        <Grid xs={2} sm={4} md={3}>
+        <Grid xs={12} sm={4} md={3}>
           <ButtonComponent
             isActive={isActive}
             handleClose={handleClose}
             name={"Marksheet"}
           />
         </Grid>
-        <Grid xs={2} sm={4} md={3}>
+        <Grid xs={12} sm={4} md={3}>
           <ButtonComponent
             isActive={isActive}
             handleClose={handleClose}
